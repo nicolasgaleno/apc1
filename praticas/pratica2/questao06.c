@@ -5,15 +5,20 @@
 #include <stdio.h>
 
 int main() {
-  float valorCompra, anoFabricacao, anoDepreciacao, valorDepreciado;
+  float valorCompra;
+  float anoFabricacao;
+  float anoDepreciacao;
+  float valorDepreciado;
 
   // Leitura do valor de compra, ano de fabricação e ano de depreciação
-  printf("Digite o valor de compra do veículo: R$ ");
-  scanf("%f", &valorCompra);
+  printf("Digite o valor de compra do veículo: R$");
+  int deu_certo = scanf("%f", &valorCompra);
+
   printf("Digite o ano de fabricação do veículo: ");
-  scanf("%f", &anoFabricacao);
+  deu_certo = scanf("%f", &anoFabricacao);
+
   printf("Digite o ano de depreciação do veículo: ");
-  scanf("%f", &anoDepreciacao);
+  deu_certo = scanf("%f", &anoDepreciacao);
 
   // Cálculo do valor depreciado
   valorDepreciado = valorCompra * (anoDepreciacao - anoFabricacao) * 0.01;

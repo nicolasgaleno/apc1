@@ -7,27 +7,28 @@
 
 int main() {
   // Declarando as variáveis
-  double distancia, angulo, altura;
+  float distancia;
+  float angulo;
+  float altura;
 
   // Lendo a distância percorrida pelo avião
   printf("Digite a distância percorrida pelo avião em KM: ");
-  scanf("%lf", &distancia);
+  int deu_certo = scanf("%f", &distancia);
 
   // Lendo o ângulo de inclinação do avião
   printf("Digite o ângulo de inclinação do avião: ");
-  scanf("%lf", &angulo);
+  deu_certo = scanf("%f", &angulo);
 
   // Verificando se o ângulo é menor ou igual a 45°
   if (angulo > 45) {
     printf("O ângulo de inclinação deve ser menor ou igual a 45°.\n");
-    return 1;
-  }
+    return 1;}
 
   // Calculando a altura
-  altura = distancia * sin(angulo * M_PI / 180);
+  altura = distancia * sin(angulo * (M_PI / 180));
 
   // Imprimindo a altura
-  printf("A altura alcançada pelo avião é: %.2lf metros\n", altura);
+  printf("A altura alcançada pelo avião é: %.2f metros\n", altura);
 
   return 0;
 }

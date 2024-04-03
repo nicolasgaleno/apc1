@@ -4,11 +4,12 @@
 #include <stdio.h>
 
 int main() {
-  float celsius, fahrenheit;
+float celsius;
+float fahrenheit;
 
   // Leitura da temperatura em graus Celsius
   printf("Digite a temperatura em graus Celsius: ");
-  scanf("%f", &celsius);
+  int deu_certo = scanf("%f", &celsius);
 
   // Cálculo da temperatura em graus Fahrenheit
   fahrenheit = (9.0 / 5.0) * celsius + 32.0;

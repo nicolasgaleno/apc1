@@ -4,21 +4,23 @@
 #include <stdio.h>
 
 int main() {
-  float num1, num2, num3, media;
+  float numero1, numero2, numero3, media;
 
   // Leitura dos três números reais
   printf("Digite o primeiro número: ");
-  scanf("%f", &num1);
+  int deu_certo = scanf("%f", &numero1);
+
   printf("Digite o segundo número: ");
-  scanf("%f", &num2);
+  deu_certo = scanf("%f", &numero2);
+
   printf("Digite o terceiro número: ");
-  scanf("%f", &num3);
+  deu_certo = scanf("%f", &numero3);
 
   // Cálculo da média aritmética
-  media = (num1 + num2 + num3) / 3;
+  media = (numero1 + numero2 + numero3) / 3;
 
   // Exibição da média aritmética
-  printf("A média aritmética dos três números é: %.2f\n", media);
+  printf("A média aritmética dos três números é: %.f\n", media);
 
   return 0;
 }

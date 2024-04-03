@@ -6,15 +6,19 @@
 
 int main() {
   // Declarando as variáveis
-  double a, b, c, delta, r1, r2;
+  float a, b, c;
+  float delta;
+  float x1, x2;
 
   // Lendo os coeficientes da equação
   printf("Digite o coeficiente A: ");
-  scanf("%lf", &a);
+  int deu_certo = scanf("%f", &a);
+
   printf("Digite o coeficiente B: ");
-  scanf("%lf", &b);
+  deu_certo = scanf("%f", &b);
+
   printf("Digite o coeficiente C: ");
-  scanf("%lf", &c);
+  deu_certo = scanf("%f", &c);
 
   // Calculando o delta
   delta = b * b - 4 * a * c;
@@ -24,14 +28,16 @@ int main() {
     printf("A equação não possui raízes reais.\n");
     return 1;
   }
-
   // Calculando as raízes
-  r1 = (-b + sqrt(delta)) / (2 * a);
-  r2 = (-b - sqrt(delta)) / (2 * a);
+  x1 = (-b + sqrt(delta)) / (2 * a);
+  x2 = (-b - sqrt(delta)) / (2 * a);
 
   // Imprimindo as raízes
-  printf("Raiz 1: %.2lf\n", r1);
-  printf("Raiz 2: %.2lf\n", r2);
+  printf("Raiz 1: %.2lf\n", x1);
+  printf("Raiz 2: %.2lf\n", x2);
+
+  //"As raízes da equação %.fx² + %.fx + %.f são %f e %f\n", a, b, c, x1, x2
+  printf("As raízes da equação %.fx² + %.fx + %.f são %f e %f\n", a, b, c, x1, x2);
 
   return 0;
 }

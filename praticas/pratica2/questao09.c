@@ -5,10 +5,11 @@
 
 int main() {
   int numero;
+  char caractere;
 
   // Leitura do número inteiro
   printf("Digite um número inteiro: ");
-  scanf("%d", &numero);
+  int deu_certo = scanf("%i", &numero);
 
   // Verificação se o número está entre 0 e 127
   if (numero < 0 || numero > 127) {
